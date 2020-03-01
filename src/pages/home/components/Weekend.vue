@@ -2,7 +2,7 @@
 <div>
     <div class="title">周末去哪儿</div>
     <ul>
-        <li class="item border-bottom"  v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom"  v-for="item of list" :key="item.id">
             <div class="item-img-wrapper">
                 <img :src="item.imgUrl" alt="" class="item-img">
             </div>
@@ -18,25 +18,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: '//img1.qunarzz.com/sight/p0/1606/23/237ad24ea960b2f290.water.jpg_256x160_23b4be66.jpg',
-        title: '大连圣亚海洋世界',
-        desc: '浪漫大连首站，浪漫的海洋主题乐园'
-      }, {
-        id: '0002',
-        imgUrl: '//img1.qunarzz.com/sight/p0/1606/23/237ad24ea960b2f290.water.jpg_256x160_23b4be66.jpg',
-        title: '大连圣亚海洋世界',
-        desc: '浪漫大连首站，浪漫的海洋主题乐园'
-      }, {
-        id: '0003',
-        imgUrl: '//img1.qunarzz.com/sight/p0/1606/23/237ad24ea960b2f290.water.jpg_256x160_23b4be66.jpg',
-        title: '大连圣亚海洋世界',
-        desc: '浪漫大连首站，浪漫的海洋主题乐园'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -50,7 +33,7 @@ export default {
     .item-img-wrapper
       overflow hidden
       height 0
-      padding-bottom 33.9%
+      padding-bottom 37.09%
       .item-img
         width 100%
     .item-info
