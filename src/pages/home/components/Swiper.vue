@@ -39,14 +39,6 @@ export default {
     showSwiper () {
       return this.list.length
     }
-  },
-  methods: {
-    getdata () {
-      console.log(this.list)
-    }
-  },
-  mounted () {
-    this.getdata()
   }
 }
 </script>

@@ -73,7 +73,7 @@ export default {
       position absolute
       left 0
       right 0
-      bottom 0
+      bottom -14px
       height .36rem
       line-height .44rem
       text-align center
