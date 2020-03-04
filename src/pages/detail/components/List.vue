@@ -8,6 +8,9 @@
           <span class="item-title-icon"></span>
           {{item.title}}
       </div>
+      <div v-if="item.children" class="item-children">
+        <detail-list :list="item.children"></detail-list>
+      </div>
       </div>
   </div>
 </template>
@@ -36,6 +39,6 @@ export default {
     line-height: .8rem
     font-size: .32rem
     padding: 0 .2rem
-  .item-chilren
+  .item-children
     padding: 0 .2rem
 </style>
