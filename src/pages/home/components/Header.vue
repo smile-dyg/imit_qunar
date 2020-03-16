@@ -1,11 +1,14 @@
 <template>
   <div class="header">
+    <!-- 左部返回 -->
       <div class="header-left">
         <div class="iconfont back-icon">&#xe624;</div>
       </div>
+      <!-- 中间搜索框 -->
       <div class="header-input">
         <span class="iconfont">&#xe632;</span>
         输入城市/景点/游玩主题</div>
+        <!-- 右部地点选择 路由配置转到city界面-->
       <router-link to='/city'>
         <div class="header-right">{{this.city}}
           <span class="iconfont arrow-icon">&#xe64a;</span>

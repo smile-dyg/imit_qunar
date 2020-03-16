@@ -1,7 +1,10 @@
 <template>
   <div class="icons">
+    <!-- 轮播在图标上的应用 -->
     <swiper :options="swiperOption">
+      <!-- 循环轮播页面 -->
       <swiper-slide v-for="(page,index) of pages" :key="index">
+        <!-- 循环页面中的图标 -->
         <div class="icon" v-for="item of page" :key="item.id">
             <div class="icon-img">
               <img class="icon-img-content" :src='item.imgUrl'>
@@ -22,12 +25,16 @@ export default {
   data () {
     return {
       swiperOption: {
-        autoplay: false
+        autoplay: false// 轮播图不自动滚动
       }
     }
   },
   computed: {
     pages () {
+      /*
+      item：具体的循环项
+      index：循环的下标
+      */
       const pages = []
       this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)

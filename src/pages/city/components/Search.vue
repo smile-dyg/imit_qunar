@@ -61,6 +61,7 @@ export default {
       }, 100)
     }
   },
+  // 实现搜索框搜索内容的页面滚动
   mounted () {
     this.scroll = new Bscroll(this.$refs.search)
   }

@@ -8,6 +8,7 @@
           <span class="item-title-icon"></span>
           {{item.title}}
       </div>
+      <!-- 递归组件，显示多级标题 -->
       <div v-if="item.children" class="item-children">
         <detail-list :list="item.children"></detail-list>
       </div>

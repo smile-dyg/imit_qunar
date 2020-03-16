@@ -3,7 +3,10 @@
     <city-header></city-header>
     <city-search :cities="cities"></city-search>
     <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
-    <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
+    <!-- 监听change事件，接收子组件的传值 -->
+    <city-alphabet :cities="cities"
+    @change="handleLetterChange">
+    </city-alphabet>
   </div>
 </template>
 
@@ -29,6 +32,7 @@ export default {
     }
   },
   methods: {
+    // 使用axios获取json数据
     getCityInfo () {
       axios.get('/api/city.json')
         .then(this.handlegetInfoSucc)

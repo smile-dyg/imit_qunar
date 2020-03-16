@@ -37,12 +37,14 @@ export default {
   computed: {
     ...mapState(['city'])
   },
+  // axios获取json数据
   methods: {
     getHomeInfo () {
       axios.get('/api/index.json?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
+      // 获取json中的数据项
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
@@ -53,6 +55,7 @@ export default {
       }
     }
   },
+  // 执行axios获取数据函数
   mounted () {
     this.lastCity = this.city
     this.getHomeInfo()

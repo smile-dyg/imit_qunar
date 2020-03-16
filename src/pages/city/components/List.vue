@@ -37,6 +37,7 @@
 
 <script>
 import Bscroll from 'better-scroll'
+// 调用vuex的api
 import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'CityList',
@@ -58,8 +59,10 @@ export default {
     ...mapMutations(['changeCity'])
   },
   mounted () {
+    // 创建scroll实例，传入Dom
     this.scroll = new Bscroll(this.$refs.wrapper)
   },
+  // 监听letter是否发生改变
   watch: {
     letter () {
       if (this.letter) {

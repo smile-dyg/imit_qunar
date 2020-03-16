@@ -1,11 +1,12 @@
 <template>
   <div class="wrapper">
+    <!-- 首页轮播图显示 -->
     <swiper :options="swiperOption" ref="mySwiper" v-if=showSwiper>
-      <!-- slides -->
+      <!-- v-for循环创建 -->
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl">
       </swiper-slide>
-      <!-- Optional controls -->
+      <!-- 轮播图下方的点 -->
       <div  class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
@@ -20,8 +21,8 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: '.swiper-pagination',
-        loop: true
+        pagination: '.swiper-pagination', // 显示轮播图下方的点
+        loop: true// 支持循环轮播
       },
       swiperList: [{
         id: '0001',
@@ -46,7 +47,7 @@ export default {
 <style lang="stylus" scoped>
   .wrapper >>> .swiper-pagination-bullet-active
     background #fff !important
-  .wrapper
+  .wrapper// 固定轮播图的宽高，防止在页面刚刷新时抖动
     overflow hidden
     width 100%
     height 0

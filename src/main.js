@@ -8,12 +8,12 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store'
 import 'styles/reset.css'
 import 'styles/border.css'
-import 'styles/iconfont.css'
-import 'swiper/dist/css/swiper.css'
+import 'styles/iconfont.css' // 引入阿里巴巴矢量库图标
+import 'swiper/dist/css/swiper.css'// 引入swiper插件，构建轮播图
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
-Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper)// 使用swiper插件
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

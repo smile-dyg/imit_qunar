@@ -22,6 +22,7 @@ export default {
     }
   },
   methods: {
+    // 头部渐隐渐现
     handleScroll () {
       const top = document.documentElement.scrollTop
       if (top > 60) {
@@ -34,9 +35,11 @@ export default {
     }
   },
   activated () {
+    // 创建滚动事件
     window.addEventListener('scroll', this.handleScroll)
   },
   deactivated () {
+    // 移除滚动事件，防止在别的界面触发
     window.removeEventListener('scroll', this.handleScroll)
   }
 }

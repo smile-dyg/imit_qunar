@@ -34,6 +34,7 @@ export default {
     }
   },
   methods: {
+    // 动态获取数据
     getDetailInfo () {
       axios.get('/api/detail.json?id=', {
         params: {

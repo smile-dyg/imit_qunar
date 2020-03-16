@@ -18,4 +18,50 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 目录结构描述
+
+```
+├─build
+├─config
+├─node_modules
+├─src
+│  ├─assets             //资源
+│  │  └─styles
+│  │      └─iconfont    //图标
+│  ├─common             //
+│  │  ├─fade            //动画组件
+│  │  └─gallary         //图片轮播
+│  ├─pages              //
+│  │  ├─city            //城市选择界面
+│  │  │  └─components   //城市选择组件
+│  │  ├─detail          //热销推荐界面
+│  │  │  └─components   //热销推荐组件
+│  │  └─home            //Home界面
+│  │      └─components  //Home组件
+│  ├─router             //路由
+│  └─store              //vuex
+└─static				//模拟数据
+    └─mock
+```
+
+### 实现功能
+
+1.Home页
+
+​	轮播图
+
+​	图标布局和轮播逻辑
+
+2.国内城市选择页面
+
+​	搜索框搜索功能
+
+​	字母表逻辑实现
+
+3.热销推荐详情页
+
+​	图片轮播
+
+​	次级标题
+
+​	上下滑动首部渐隐渐现效果
